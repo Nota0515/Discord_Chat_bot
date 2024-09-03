@@ -1,0 +1,11 @@
+{
+  "name": "discord_chat_bot",
+  "version": "1.0.0",
+  "description": "This is just a chat bot for casual talking ...:)\r Specially for those who are anime lovers💖",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
