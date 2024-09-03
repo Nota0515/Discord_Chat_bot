@@ -1,0 +1,8 @@
+#derictories to be igonored
+node_modules/
+
+#your secret key holding files
+config.json
+
+#your log files 
+.log
