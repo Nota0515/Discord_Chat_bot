@@ -15,6 +15,6 @@ module.exports = {
         const userMessage = interaction.options.getString('message');
         await interaction.deferReply();
         const botreply = await generateChats(userMessage);
-        await interaction.editreply(botreply);
+        await interaction.editReply(botreply);
     },
 };
