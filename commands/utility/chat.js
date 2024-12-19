@@ -1,4 +1,4 @@
-const {SlashCommandBuilder, UserManager} = require("discord.js");
+const {SlashCommandBuilder,} = require("discord.js");
 const {generateChats} = require("./generation");
 
 module.exports = {
@@ -12,9 +12,14 @@ module.exports = {
             .setRequired(true)
         ),
     async execute(interaction){
-        const userMessage = interaction.options.getString('message');
-        await interaction.deferReply();
-        const botreply = await generateChats(userMessage);
-        await interaction.editReply(botreply);
+        try{
+            const userMessage = interaction.options.getString('messages');
+            await interaction.deferReply();
+            const botreply = await generateChats(userMessage);
+            await interaction.editReply(botreply);
+        }catch(e){
+            console.error("kuch toh gedbad hai deya !");
+            await interaction.editReply("There was a problem with something")
+        }
     },
 };
